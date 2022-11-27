@@ -1,0 +1,78 @@
+
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background: #000;
+  position: relative;
+}
+canvas#heart {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+audio {
+  border-bottom: 10px solid #ff0000;
+  display: flex;
+}
+[class*="classic"]:before {
+  content: "Yêu ";
+}
+[class*="classic"]::after {
+  content: " 💗";
+}
+.classic-5 {
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 30px;
+  color: #fff;
+  word-break: break-all;
+  width: 280px;
+  text-align: center;
+  clip-path: inset(0 100% 0 0);
+  animation: c5 3s steps(11) infinite;
+}
+.title,
+content,
+.title span {
+  position: absolute;
+  color: #fff;
+
+}
+.title {
+  top: calc(50% - 70px);
+  left: calc(50% - 140px);
+  z-index: 10;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+@keyframes c5 {
+  to {
+    clip-path: inset(0 -1ch 0 0);
+  }
+}
+
+.title:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  opacity: 0.4;
+  animation: pl3 1s infinite;
+}
+@keyframes pl3 {
+  to {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
